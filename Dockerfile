@@ -12,4 +12,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
 
-CMD ["python", "execution/tg_bot.py"]
+ENV PORT=10000
+EXPOSE 10000
+
+CMD ["python", "app.py"]
